@@ -84,253 +84,253 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               SizedBox(height: heigth * 0.02),
-              Row(
-                children: [
-                  Text(
-                    "Top PGs for you",
-                    style: GoogleFonts.manrope(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      fontStyle: FontStyle.normal,
-                      color: Color.fromRGBO(2, 48, 71, 1),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: heigth * 0.02),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(237, 246, 249, 1),
+              // Row(
+              //   children: [
+              //     Text(
+              //       "Top PGs for you",
+              //       style: GoogleFonts.manrope(
+              //         fontSize: 18,
+              //         fontWeight: FontWeight.w700,
+              //         fontStyle: FontStyle.normal,
+              //         color: Color.fromRGBO(2, 48, 71, 1),
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              // SizedBox(height: heigth * 0.02),
+              // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //     children: [
+              //       Container(
+              //         decoration: BoxDecoration(
+              //           color: Color.fromRGBO(237, 246, 249, 1),
 
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8),
-                              child: Image.asset(
-                                "assets/images/Rectangle 35.png",
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ConstrainedBox(
-                                  constraints: BoxConstraints(
-                                    maxWidth:
-                                        200, // Set your desired maximum width
-                                  ),
+              //           borderRadius: BorderRadius.circular(14),
+              //         ),
+              //         child: Padding(
+              //           padding: const EdgeInsets.all(8.0),
+              //           child: Row(
+              //             children: [
+              //               Padding(
+              //                 padding: const EdgeInsets.only(right: 8),
+              //                 child: Image.asset(
+              //                   "assets/images/Rectangle 35.png",
+              //                   fit: BoxFit.cover,
+              //                 ),
+              //               ),
+              //               Column(
+              //                 crossAxisAlignment: CrossAxisAlignment.start,
+              //                 children: [
+              //                   ConstrainedBox(
+              //                     constraints: BoxConstraints(
+              //                       maxWidth:
+              //                           200, // Set your desired maximum width
+              //                     ),
 
-                                  child: Text(
-                                    "Sunrise Residency PG",
-                                    style: GoogleFonts.dmSans(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FontStyle.normal,
-                                      color: Color.fromRGBO(2, 48, 71, 1),
-                                    ),
-                                    softWrap: true,
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
+              //                     child: Text(
+              //                       "Sunrise Residency PG",
+              //                       style: GoogleFonts.dmSans(
+              //                         fontSize: 18,
+              //                         fontWeight: FontWeight.w500,
+              //                         fontStyle: FontStyle.normal,
+              //                         color: Color.fromRGBO(2, 48, 71, 1),
+              //                       ),
+              //                       softWrap: true,
+              //                       maxLines: 2,
+              //                       overflow: TextOverflow.ellipsis,
+              //                     ),
+              //                   ),
 
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.location_pin,
-                                      color: Colors.black,
-                                    ),
-                                    SizedBox(width: 5),
-                                    Text(
-                                      "Narhe,Pune",
-                                      style: GoogleFonts.dmSans(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        fontStyle: FontStyle.normal,
-                                        color: Color.fromRGBO(2, 48, 71, 1),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 8),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Color.fromRGBO(161, 188, 255, 1),
+              //                   Row(
+              //                     children: [
+              //                       Icon(
+              //                         Icons.location_pin,
+              //                         color: Colors.black,
+              //                       ),
+              //                       SizedBox(width: 5),
+              //                       Text(
+              //                         "Narhe,Pune",
+              //                         style: GoogleFonts.dmSans(
+              //                           fontSize: 13,
+              //                           fontWeight: FontWeight.w400,
+              //                           fontStyle: FontStyle.normal,
+              //                           color: Color.fromRGBO(2, 48, 71, 1),
+              //                         ),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                   SizedBox(height: 8),
+              //                   Row(
+              //                     children: [
+              //                       Container(
+              //                         decoration: BoxDecoration(
+              //                           color: Color.fromRGBO(161, 188, 255, 1),
 
-                                        borderRadius: BorderRadius.circular(24),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(4),
-                                        child: Icon(
-                                          Icons.person_3,
-                                          color: Color.fromRGBO(2, 48, 71, 1),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: 10),
-                                    Text(
-                                      "Boys/Male PG",
-                                      style: GoogleFonts.dmSans(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        fontStyle: FontStyle.normal,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 8),
-                                Row(
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Text(
-                                      "₹8,500/month",
-                                      style: GoogleFonts.dmSans(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w700,
-                                        color: Color.fromRGBO(0, 119, 182, 1),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 10),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(237, 246, 249, 1),
+              //                           borderRadius: BorderRadius.circular(24),
+              //                         ),
+              //                         child: Padding(
+              //                           padding: const EdgeInsets.all(4),
+              //                           child: Icon(
+              //                             Icons.person_3,
+              //                             color: Color.fromRGBO(2, 48, 71, 1),
+              //                           ),
+              //                         ),
+              //                       ),
+              //                       SizedBox(width: 10),
+              //                       Text(
+              //                         "Boys/Male PG",
+              //                         style: GoogleFonts.dmSans(
+              //                           fontSize: 13,
+              //                           fontWeight: FontWeight.w400,
+              //                           fontStyle: FontStyle.normal,
+              //                         ),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                   SizedBox(height: 8),
+              //                   Row(
+              //                     children: [
+              //                       SizedBox(width: 10),
+              //                       Text(
+              //                         "₹8,500/month",
+              //                         style: GoogleFonts.dmSans(
+              //                           fontSize: 18,
+              //                           fontWeight: FontWeight.w700,
+              //                           color: Color.fromRGBO(0, 119, 182, 1),
+              //                         ),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                 ],
+              //               ),
+              //             ],
+              //           ),
+              //         ),
+              //       ),
+              //       SizedBox(width: 10),
+              //       Container(
+              //         decoration: BoxDecoration(
+              //           color: Color.fromRGBO(237, 246, 249, 1),
 
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8),
-                              child: Image.asset(
-                                "assets/images/Rectangle 35.png",
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ConstrainedBox(
-                                  constraints: BoxConstraints(
-                                    maxWidth:
-                                        200, // Set your desired maximum width
-                                  ),
+              //           borderRadius: BorderRadius.circular(14),
+              //         ),
+              //         child: Padding(
+              //           padding: const EdgeInsets.all(8.0),
+              //           child: Row(
+              //             children: [
+              //               Padding(
+              //                 padding: const EdgeInsets.only(right: 8),
+              //                 child: Image.asset(
+              //                   "assets/images/Rectangle 35.png",
+              //                   fit: BoxFit.cover,
+              //                 ),
+              //               ),
+              //               Column(
+              //                 crossAxisAlignment: CrossAxisAlignment.start,
+              //                 children: [
+              //                   ConstrainedBox(
+              //                     constraints: BoxConstraints(
+              //                       maxWidth:
+              //                           200, // Set your desired maximum width
+              //                     ),
 
-                                  child: Text(
-                                    "Sunrise Residency PG",
-                                    style: GoogleFonts.dmSans(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FontStyle.normal,
-                                      color: Color.fromRGBO(2, 48, 71, 1),
-                                    ),
-                                    softWrap: true,
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
+              //                     child: Text(
+              //                       "Sunrise Residency PG",
+              //                       style: GoogleFonts.dmSans(
+              //                         fontSize: 18,
+              //                         fontWeight: FontWeight.w500,
+              //                         fontStyle: FontStyle.normal,
+              //                         color: Color.fromRGBO(2, 48, 71, 1),
+              //                       ),
+              //                       softWrap: true,
+              //                       maxLines: 2,
+              //                       overflow: TextOverflow.ellipsis,
+              //                     ),
+              //                   ),
 
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.location_pin,
-                                      color: Colors.black,
-                                    ),
-                                    SizedBox(width: 5),
-                                    Text(
-                                      "Narhe,Pune",
-                                      style: GoogleFonts.dmSans(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        fontStyle: FontStyle.normal,
-                                        color: Color.fromRGBO(2, 48, 71, 1),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 8),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Color.fromRGBO(161, 188, 255, 1),
+              //                   Row(
+              //                     children: [
+              //                       Icon(
+              //                         Icons.location_pin,
+              //                         color: Colors.black,
+              //                       ),
+              //                       SizedBox(width: 5),
+              //                       Text(
+              //                         "Narhe,Pune",
+              //                         style: GoogleFonts.dmSans(
+              //                           fontSize: 13,
+              //                           fontWeight: FontWeight.w400,
+              //                           fontStyle: FontStyle.normal,
+              //                           color: Color.fromRGBO(2, 48, 71, 1),
+              //                         ),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                   SizedBox(height: 8),
+              //                   Row(
+              //                     children: [
+              //                       Container(
+              //                         decoration: BoxDecoration(
+              //                           color: Color.fromRGBO(161, 188, 255, 1),
 
-                                        borderRadius: BorderRadius.circular(24),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(4),
-                                        child: Icon(
-                                          Icons.person_3,
-                                          color: Color.fromRGBO(2, 48, 71, 1),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: 10),
-                                    Text(
-                                      "Boys/Male PG",
-                                      style: GoogleFonts.dmSans(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        fontStyle: FontStyle.normal,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 8),
-                                Row(
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Text(
-                                      "₹8,500/month",
-                                      style: GoogleFonts.dmSans(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w700,
-                                        color: Color.fromRGBO(0, 119, 182, 1),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 20),
-                  ],
-                ),
-              ),
+              //                           borderRadius: BorderRadius.circular(24),
+              //                         ),
+              //                         child: Padding(
+              //                           padding: const EdgeInsets.all(4),
+              //                           child: Icon(
+              //                             Icons.person_3,
+              //                             color: Color.fromRGBO(2, 48, 71, 1),
+              //                           ),
+              //                         ),
+              //                       ),
+              //                       SizedBox(width: 10),
+              //                       Text(
+              //                         "Boys/Male PG",
+              //                         style: GoogleFonts.dmSans(
+              //                           fontSize: 13,
+              //                           fontWeight: FontWeight.w400,
+              //                           fontStyle: FontStyle.normal,
+              //                         ),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                   SizedBox(height: 8),
+              //                   Row(
+              //                     children: [
+              //                       SizedBox(width: 10),
+              //                       Text(
+              //                         "₹8,500/month",
+              //                         style: GoogleFonts.dmSans(
+              //                           fontSize: 18,
+              //                           fontWeight: FontWeight.w700,
+              //                           color: Color.fromRGBO(0, 119, 182, 1),
+              //                         ),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                 ],
+              //               ),
+              //             ],
+              //           ),
+              //         ),
+              //       ),
+              //       SizedBox(width: 20),
+              //     ],
+              //   ),
+              // ),
 
-              SizedBox(height: heigth * 0.02),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: gradientButton("View More"),
-                  ),
-                ],
-              ),
+              // SizedBox(height: heigth * 0.02),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     GestureDetector(
+              //       onTap: () {},
+              //       child: gradientButton("View More"),
+              //     ),
+              //   ],
+              // ),
               SizedBox(height: heigth * 0.02),
               Row(
                 children: [

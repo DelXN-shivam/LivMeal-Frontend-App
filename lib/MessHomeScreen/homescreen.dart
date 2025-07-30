@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:liv_meal_app/constant/constants.dart';
+import 'package:liv_meal_app/constant/drawer.dart';
 
 class MesshomeScreen extends StatefulWidget {
   const MesshomeScreen({super.key});
@@ -13,12 +15,21 @@ class _MesshomeScreenState extends State<MesshomeScreen> {
   // Color getFavoriteColor(int index) {
   //   return isFavoriteList[index] ? Colors.red : Colors.amber;
   // }
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final List<String> drawerList = [
+    "Popularity",
+    "Price hight to low",
+    "Price low to high",
+    "Highest Rating",
+    "Lowest Price & Best Rated ",
+  ];
 
   List<bool> isFavoriteList = [false, false, false];
   // List <Integer>sorte
   void _showSortBottomSheet(BuildContext context, double width, Widget method) {
     showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
@@ -26,10 +37,16 @@ class _MesshomeScreenState extends State<MesshomeScreen> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget SortedFieldConatainer(double width) {
     return Container(
       padding: EdgeInsets.all(20),
-      height: 300,
+      // height: 300,
+      constraints: BoxConstraints(
+        maxHeight:
+            MediaQuery.of(context).size.height * 0.8, // 80% of screen height
+      ),
+
       width: width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +65,56 @@ class _MesshomeScreenState extends State<MesshomeScreen> {
             padding: const EdgeInsets.all(10),
             child: Row(
               children: [
-                Column(children: [Text("dgjhgk")]),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Popularity",
+                      style: GoogleFonts.dmSans(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromRGBO(0, 0, 0, 1),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Price hight to low",
+                      style: GoogleFonts.dmSans(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromRGBO(0, 0, 0, 1),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Price low to high",
+                      style: GoogleFonts.dmSans(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromRGBO(0, 0, 0, 1),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Highest Rating",
+                      style: GoogleFonts.dmSans(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromRGBO(0, 0, 0, 1),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Lowest Price & Best Rated",
+                      style: GoogleFonts.dmSans(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromRGBO(0, 0, 0, 1),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                  ],
+                ),
               ],
             ),
           ),
@@ -63,6 +129,8 @@ class _MesshomeScreenState extends State<MesshomeScreen> {
     var width = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: MyCustomDrawer(),
       backgroundColor: Colors.blue,
       body: CustomScrollView(
         slivers: [
@@ -111,10 +179,20 @@ class _MesshomeScreenState extends State<MesshomeScreen> {
                       children: [
                         GestureDetector(
                           onTap: () {
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) => Scaffold(
+                            //       appBar: AppBar(title: Text("Map View")),
+                            //       body: GoogleMapScreen(width),
+                            //     ),
+                            //   ),
+                            // );
+                            // GoogleMapScreen(width);
                             _showSortBottomSheet(
                               context,
                               width,
-                              SortedFieldConatainer(width),
+                              GoogleMapScreen(width),
                             );
                           },
                           child: SuggestionContainer(
@@ -139,11 +217,7 @@ class _MesshomeScreenState extends State<MesshomeScreen> {
                         SizedBox(width: 10),
                         GestureDetector(
                           onTap: () {
-                            _showSortBottomSheet(
-                              context,
-                              width,
-                              SortedFieldConatainer(width),
-                            );
+                            _scaffoldKey.currentState?.openDrawer();
                           },
                           child: SuggestionContainer(
                             "Filter",
@@ -462,4 +536,8 @@ class _MesshomeScreenState extends State<MesshomeScreen> {
       ),
     );
   }
+
+  // Widget DrawerOpen() {
+  //   return Column();
+  // }
 }
