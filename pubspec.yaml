@@ -12,18 +12,33 @@ dependencies:
     sdk: flutter
   flutter_datetime_picker: ^1.5.1
   flutter_polyline_points: ^3.0.1
+  flutter_svg: ^2.2.0
   geolocator: ^14.0.2
   google_fonts: ^6.2.1
   google_maps_flutter: ^2.12.3
   http: ^1.4.0
+  image_picker: ^1.1.2
   intl: ^0.20.2
 
+  lottie: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.1
 
 flutter:
   uses-material-design: true
   assets:
+    - assets/animations/
     - assets/images/
+    - assets/
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#3b82f6"
+  adaptive_icon_foreground: "assets/images/app_icon.png"
+  adaptive_icon_inset: 40

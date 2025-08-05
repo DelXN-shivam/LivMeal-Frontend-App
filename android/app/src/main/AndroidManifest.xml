@@ -4,9 +4,19 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    
+    <!-- Camera and Image Picker Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    
+    <!-- Camera feature (optional - allows app to be installed on devices without camera) -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
 
     <application
-        android:label="liv_meal_app"
+        android:label="LivMeal"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         
@@ -32,7 +42,7 @@
         <!-- Flutter embedding -->
         <meta-data
             android:name="flutterEmbedding"
-            android:value="2" /> --> -->
+            android:value="2" />
             <!-- android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyYourRealKeyHere"/> -->
             
